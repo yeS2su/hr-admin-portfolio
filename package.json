@@ -1,0 +1,27 @@
+{
+  "name": "hr-admin-team-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "typecheck": "wrangler types && tsc --noEmit && tsc --noEmit -p test/tsconfig.json && tsc --noEmit -p tsconfig.node.json",
+    "check": "npm run typecheck && npm run test:run",
+    "db:migrate:local": "wrangler d1 migrations apply DB --local",
+    "seed:local": "tsx scripts/seed-dev.ts"
+  },
+  "dependencies": {
+    "bcryptjs": "3.0.3",
+    "hono": "4.13.8"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-plugin": "1.2.1",
+    "@types/node": "^24.13.6",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3",
+    "vitest": "4.1.0",
+    "wrangler": "4.136.1"
+  }
+}

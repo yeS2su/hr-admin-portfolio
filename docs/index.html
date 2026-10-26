@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f7f2" />
+  <meta name="description" content="업무일지, 면접 일정, 자산 반납을 한곳에서 확인하고 수정하는 인사·총무 업무관리 웹앱, HR-Admin." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="HR-Admin | 인사·총무 업무관리" />
+  <meta property="og:description" content="실제 업무에서 출발한 HR 웹앱. 주요 화면과 기획 과정, 담당한 일을 소개합니다." />
+  <meta property="og:url" content="https://yes2su.github.io/hr-admin-portfolio/" />
+  <meta property="og:image" content="https://yes2su.github.io/hr-admin-portfolio/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="HR-Admin 프로젝트 소개와 실제 업무공간 화면" />
+  <title>HR-Admin | 인사·총무 업무관리</title>
+  <link rel="canonical" href="https://yes2su.github.io/hr-admin-portfolio/" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 이동</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="#top" aria-label="HR-Admin 처음으로"><span class="brand-symbol" aria-hidden="true">H</span>HR-Admin<span class="wordmark-caption">프로젝트 소개</span></a>
+      <nav aria-label="페이지 메뉴">
+        <a href="#features">메뉴별 기능</a>
+        <a href="#details">상세 화면</a>
+        <a href="#background">배경</a>
+        <a href="#contribution">작업 내용</a>
+      </nav>
+      <a class="repository-link" href="https://github.com/yeS2su/hr-admin-portfolio" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="project-intro container" id="top" aria-labelledby="project-title">
+      <div class="project-heading">
+        <p class="project-label"><span aria-hidden="true"></span> 인사·총무 업무관리 웹앱</p>
+        <h1 id="project-title">HR-Admin<span class="title-dot">.</span></h1>
+      </div>
+      <div class="project-intro-copy">
+        <p class="project-summary">업무일지와 면접 일정, 자산 반납을<br class="wide-break" /> 한곳에서 확인하고 수정합니다.</p>
+        <div class="intro-actions">
+          <a class="primary-link" href="#screens">실제 화면 보기 <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="https://github.com/yeS2su/hr-admin-portfolio" target="_blank" rel="noreferrer">GitHub 저장소 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <dl class="project-facts">
+        <div><dt>사용 대상</dt><dd>인사·총무 담당자</dd></div>
+        <div><dt>프로젝트 형태</dt><dd>업무용 웹앱</dd></div>
+        <div><dt>사용 기술</dt><dd>TypeScript, Hono, Cloudflare D1</dd></div>
+      </dl>
+    </section>
+
+    <section class="screen-section container" id="screens" aria-labelledby="screen-title">
+      <div class="section-topline"><h2 id="screen-title"><span class="section-number">01</span> 팀 업무공간</h2><a class="text-link" href="app-home-20261015.png" target="_blank" rel="noreferrer">원본 크기로 보기 <span aria-hidden="true">↗</span></a></div>
+      <figure class="product-screen">
+        <a class="screen-image-link" href="app-home-20261015.png" target="_blank" rel="noreferrer" aria-label="HR-Admin 실제 홈화면 원본 크기로 보기"><img class="app-home-image" src="app-home-20261015.png" width="1440" height="1080" alt="가상 사용자 A·B·C의 팀 업무공간과 월간업무, 총무비용 캘린더" /></a>
+        <figcaption>실제 웹앱 화면 · 모든 이름과 업무 내용은 가상 데이터입니다.</figcaption>
+      </figure>
+    </section>
+
+    <section class="feature-overview container" id="features" aria-labelledby="features-title">
+      <div class="gallery-heading"><div class="section-label"><span class="section-number">02</span><h2 id="features-title">메뉴별 기능</h2></div><p>입력, 확인, 수정까지 업무별로 구성했습니다.</p></div>
+      <div class="feature-groups">
+        <section class="feature-group" aria-labelledby="features-hiring">
+          <div class="feature-group-heading"><span class="group-index">01</span><h3 id="features-hiring">채용·입사</h3><span class="menu-count">4개 메뉴</span></div>
+          <article class="feature-menu"><div class="feature-menu-title"><h4>입사 체크리스트</h4><a href="#details" data-open-preview="onboarding" aria-label="입사 체크리스트 상세 화면 보기">화면 보기 ↗</a></div><p>입사자별 준비 항목과 완료 수를 확인합니다.</p><ul><li>서류·계정·장비 준비를 항목별로 체크</li><li>완료·검토 필요 표시와 입사자 정보 수정</li><li>입사일과 진행 상태 확인, 엑셀 다운로드</li></ul></article>
+          <article class="feature-menu"><div class="feature-menu-title"><h4>이력서 송부 체크</h4><a href="#details" data-open-preview="resume" aria-label="이력서 송부 체크 상세 화면 보기">화면 보기 ↗</a></div><p>공고별 이력서 전달 날짜와 확인 상태를 관리합니다.</p><ul><li>잡코리아·사람인별로 공고를 묶고 공고명·메일명·본부·수신자를 항목별 행으로 확인</li><li>공고마다 날짜를 추가하고 셀별 아이콘으로 발송 상태 변경, 메모 수정</li><li>내린 공고 별도 조회와 엑셀 다운로드</li></ul></article>
+          <article class="feature-menu"><div class="feature-menu-title"><h4>면접 일정</h4><a href="#details" data-open-preview="interview" aria-label="면접 일정 상세 화면 보기">화면 보기 ↗</a></div><p>가능 시간을 모아 일정을 조율합니다.</p><ul><li>본부·장소·실무진·경영진 면접 구분</li><li>면접관 가능일을 오전·오후와 시간으로 입력</li><li>표·달력 전환, 합불 메모와 결과통보 체크</li></ul></article>
+          <article class="feature-menu"><div class="feature-menu-title"><h4>경영진면접</h4><a href="#details" data-open-preview="executive" aria-label="경영진면접 상세 화면 보기">화면 보기 ↗</a></div><p>경영진 일정과 면접 결과를 따로 관리합니다.</p><ul><li>면접일·시간·면접관·장소 입력</li><li>진행 상태와 결과, 후속 메모 수정</li><li>표·달력 전환과 엑셀 다운로드</li></ul></article>
+        </section>
+        <section class="feature-group" aria-labelledby="features-admin">
+          <div class="feature-group-heading"><span class="group-index">02</span><h3 id="features-admin">총무관리</h3><span class="menu-count">4개 메뉴</span></div>
+          <article class="feature-menu"><div class="feature-menu-title"><h4>총무비용</h4><a href="#details" data-open-preview="expenses" aria-label="총무비용 상세 화면 보기">화면 보기 ↗</a></div><p>월별 비용 일정과 처리 여부를 확인합니다.</p><ul><li>월·연도 이동과 날짜 선택 입력</li><li>항목 추천, 연필 아이콘으로 내용 수정</li><li>✓·△ 상태 변경과 완료 항목 회색 표시</li></ul></article>
+          <article class="feature-menu"><div class="feature-menu-title"><h4>자산관리대장</h4><a href="#details" data-open-preview="assets" aria-label="자산관리대장 상세 화면 보기">화면 보기 ↗</a></div><p>대여 이력부터 반납 안내까지 확인합니다.</p><ul><li>자산코드·자산명·현재 사용자 검색</li><li>목록·상세 수정과 반출·반납 이력 확인</li><li>반납 임박·기한 경과 목록과 안내문 생성</li></ul></article>
+          <article class="feature-menu"><div class="feature-menu-title"><h4>방문증 관리</h4><a href="#details" data-open-preview="visitors" aria-label="방문증 관리 상세 화면 보기">화면 보기 ↗</a></div><p>기간과 출입권한을 선택해 기록합니다.</p><ul><li>날짜 선택으로 사용기간 입력</li><li>기안 유무 O/X, 층별·구역별 출입권한 복수 선택</li><li>등록 정보 수정과 반출·반납 상태 확인</li></ul></article>
+          <article class="feature-menu"><div class="feature-menu-title"><h4>특허관리</h4><a href="#details" data-open-preview="patents" aria-label="특허관리 상세 화면 보기">화면 보기 ↗</a></div><p>납부기한과 기안 진행 상태를 확인합니다.</p><ul><li>연도별 조회와 특허명·번호 검색</li><li>납부기한과 비용 확인</li><li>기안 필요·기안중·기안완료·납부완료 선택</li></ul></article>
+        </section>
+      </div>
+    </section>
+
+    <section class="case-section container" id="background" aria-labelledby="background-title">
+      <div class="section-label"><span class="section-number">03</span><h2 id="background-title">기획 배경</h2></div>
+      <div class="case-copy">
+        <p>업무일지와 면접 일정, 자산관리대장을 여러 스프레드시트에서 관리하던 방식에서 출발했습니다. 필요한 기록을 찾거나 수정할 때 파일을 오가는 과정을 줄이고자 했습니다.</p>
+        <p>기존 자료에서 필요한 항목을 골라 메뉴와 입력 화면을 정했습니다. 엑셀 다운로드는 유지하고, 입력과 수정은 업무별 화면에서 처리하도록 구성했습니다.</p>
+      </div>
+    </section>
+
+    <section class="detail-gallery container" id="details" aria-labelledby="details-title">
+      <div class="gallery-heading"><div class="section-label"><span class="section-number">04</span><h2 id="details-title">메뉴별 상세 화면</h2></div><p>대분류와 메뉴를 선택해 실제 화면을 확인합니다.</p></div>
+      <div class="category-tabs" role="tablist" aria-label="업무 대분류">
+        <button type="button" role="tab" id="category-hiring" data-category="hiring" aria-controls="group-hiring" aria-selected="true">채용·입사</button>
+        <button type="button" role="tab" id="category-admin" data-category="admin" aria-controls="group-admin" aria-selected="false" tabindex="-1">총무관리</button>
+      </div>
+      <div id="group-hiring" role="tabpanel" aria-labelledby="category-hiring">
+        <div class="screen-tabs" role="tablist" aria-label="채용·입사 세부메뉴">
+          <button type="button" role="tab" id="tab-onboarding" aria-controls="panel-onboarding" aria-selected="true" data-screen="onboarding">입사 체크리스트</button>
+          <button type="button" role="tab" id="tab-resume" aria-controls="panel-resume" aria-selected="false" tabindex="-1" data-screen="resume">이력서 송부 체크</button>
+          <button type="button" role="tab" id="tab-interview" aria-controls="panel-interview" aria-selected="false" tabindex="-1" data-screen="interview">면접 일정</button>
+          <button type="button" role="tab" id="tab-executive" aria-controls="panel-executive" aria-selected="false" tabindex="-1" data-screen="executive">경영진면접</button>
+        </div>
+        <article class="screen-panel" id="panel-onboarding" role="tabpanel" aria-labelledby="tab-onboarding" tabindex="0">
+          <div class="screen-panel-heading"><div><h3>입사자 한 명씩 준비 항목을 확인</h3><p>서류 수령, 계정 신청, 장비 지급을 입사자별로 확인합니다. 완료한 항목 수와 남은 항목이 함께 표시되어 후속 업무를 찾기 쉽습니다.</p></div><a class="text-link" href="onboarding-detail-20261015-r2.png" target="_blank" rel="noreferrer">크게 보기 ↗</a></div>
+          <figure class="detail-screen"><a href="onboarding-detail-20261015-r2.png" target="_blank" rel="noreferrer" aria-label="입사 체크리스트 원본 화면 보기"><img src="onboarding-detail-20261015-r2.png" alt="가상 데이터로 구성한 HR-Admin 입사 체크리스트 실제 화면" width="1440" height="1080" /></a><figcaption>입사 체크리스트 · 실제 웹앱에 가상 데이터를 표시한 화면</figcaption></figure>
+        </article>
+        <article class="screen-panel" id="panel-resume" role="tabpanel" aria-labelledby="tab-resume" tabindex="0" hidden>
+          <div class="screen-panel-heading"><div><h3>공고별 발송 현황을 날짜 단위로 관리</h3><p>채용사이트는 잡코리아·사람인으로 구분하고, 공고명·메일명·본부·수신자를 항목별 행으로 정리합니다. 날짜별 상태는 아이콘으로 바꾸고 공고마다 날짜를 추가할 수 있습니다. 이메일을 자동 발송하는 기능은 아닙니다.</p></div></div>
+          <figure class="detail-screen"><a href="resume-detail-20261015-r3.png" target="_blank" rel="noreferrer" aria-label="이력서 송부 체크 실제 화면 크게 보기"><img src="resume-detail-20261015-r3.png" alt="실제 HR-Admin 이력서 송부 체크 화면. 잡코리아·사람인별 공고, 날짜 행과 발송 상태를 표시하며 데이터는 모두 가상입니다." width="1440" height="1252" /></a><figcaption>이력서 송부 체크 · 실제 웹앱에 가상 데이터만 넣어 캡처한 화면</figcaption></figure>
+        </article>
+        <article class="screen-panel" id="panel-interview" role="tabpanel" aria-labelledby="tab-interview" tabindex="0" hidden>
+          <div class="screen-panel-heading"><div><h3>가능 시간 입력부터 월별 일정 확인까지</h3><p>지원자 연락처 입력과 면접관 가능일 확인을 같은 업무 흐름에 배치했습니다. 확정한 날짜와 시간은 표 또는 달력으로 확인하고, 면접 결과와 메모도 수정합니다.</p></div><a class="text-link" href="interview-detail-20261015-r2.png" target="_blank" rel="noreferrer">크게 보기 ↗</a></div>
+          <figure class="detail-screen"><a href="interview-detail-20261015-r2.png" target="_blank" rel="noreferrer" aria-label="면접 일정 원본 화면 보기"><img src="interview-detail-20261015-r2.png" alt="가상 데이터로 구성한 HR-Admin 면접 일정 실제 화면" width="1440" height="1080" /></a><figcaption>면접 일정 · 실제 웹앱에 가상 데이터를 표시한 화면</figcaption></figure>
+        </article>
+        <article class="screen-panel" id="panel-executive" role="tabpanel" aria-labelledby="tab-executive" tabindex="0" hidden>
+          <div class="screen-panel-heading"><div><h3>다음 면접 단계도 별도로 관리</h3><p>경영진면접을 별도 메뉴로 구분했습니다. 지원자별 면접 시간과 장소, 진행 상태를 확인하고 결과와 후속 메모를 남깁니다.</p></div><a class="text-link" href="executive-detail-20261015-r2.png" target="_blank" rel="noreferrer">크게 보기 ↗</a></div>
+          <figure class="detail-screen"><a href="executive-detail-20261015-r2.png" target="_blank" rel="noreferrer" aria-label="경영진면접 원본 화면 보기"><img src="executive-detail-20261015-r2.png" alt="가상 데이터로 구성한 HR-Admin 경영진면접 실제 화면" width="1440" height="1080" /></a><figcaption>경영진면접 · 실제 웹앱에 가상 데이터를 표시한 화면</figcaption></figure>
+        </article>
+      </div>
+      <div id="group-admin" role="tabpanel" aria-labelledby="category-admin" hidden>
+        <div class="screen-tabs" role="tablist" aria-label="총무관리 세부메뉴">
+          <button type="button" role="tab" id="tab-expenses" aria-controls="panel-expenses" aria-selected="true" data-screen="expenses">총무비용</button>
+          <button type="button" role="tab" id="tab-assets" aria-controls="panel-assets" aria-selected="false" tabindex="-1" data-screen="assets">자산관리대장</button>
+          <button type="button" role="tab" id="tab-visitors" aria-controls="panel-visitors" aria-selected="false" tabindex="-1" data-screen="visitors">방문증 관리</button>
+          <button type="button" role="tab" id="tab-patents" aria-controls="panel-patents" aria-selected="false" tabindex="-1" data-screen="patents">특허관리</button>
+        </div>
+        <article class="screen-panel" id="panel-expenses" role="tabpanel" aria-labelledby="tab-expenses" tabindex="0">
+          <div class="screen-panel-heading"><div><h3>내용 수정과 처리 상태 변경을 구분</h3><p>연필 아이콘은 비용 항목 수정에, ✓·△는 처리 상태 변경에 사용합니다. 완료 항목은 회색으로 구분하며 월별 일정은 달력에서 확인합니다.</p></div><a class="text-link" href="expenses-detail-20261015-r2.png" target="_blank" rel="noreferrer">크게 보기 ↗</a></div>
+          <figure class="detail-screen"><a href="expenses-detail-20261015-r2.png" target="_blank" rel="noreferrer" aria-label="총무비용 원본 화면 보기"><img src="expenses-detail-20261015-r2.png" alt="가상 데이터로 구성한 HR-Admin 총무비용 실제 화면" width="1440" height="1080" /></a><figcaption>총무비용 · 실제 웹앱에 가상 데이터를 표시한 화면</figcaption></figure>
+        </article>
+        <article class="screen-panel" id="panel-assets" role="tabpanel" aria-labelledby="tab-assets" tabindex="0" hidden>
+          <div class="screen-panel-heading"><div><h3>반납 대상 확인 후 안내 문구 생성</h3><p>반납 관리 영역을 펼치면 기한이 임박했거나 지난 자산이 표시됩니다. 사용자, 반출사유, 자산코드와 사용종료일이 포함된 안내문을 생성해 복사합니다. 문자는 자동 전송하지 않습니다.</p></div><a class="text-link" href="asset-return-detail-20261015-r2.png" target="_blank" rel="noreferrer">크게 보기 ↗</a></div>
+          <figure class="detail-screen"><a href="asset-return-detail-20261015-r2.png" target="_blank" rel="noreferrer" aria-label="자산관리대장 원본 화면 보기"><img src="asset-return-detail-20261015-r2.png" alt="가상 데이터로 구성한 HR-Admin 자산관리대장 실제 화면" width="1440" height="1080" /></a><figcaption>자산관리대장 · 실제 웹앱에 가상 데이터를 표시한 화면</figcaption></figure>
+        </article>
+        <article class="screen-panel" id="panel-visitors" role="tabpanel" aria-labelledby="tab-visitors" tabindex="0" hidden>
+          <div class="screen-panel-heading"><div><h3>방문증에 필요한 선택 항목을 명확하게</h3><p>사용기간은 날짜 선택으로 입력하고, 기안 유무는 O/X로 구분합니다. 출입권한은 층별·구역별로 복수 선택할 수 있으며, 등록한 정보도 수정할 수 있습니다.</p></div><a class="text-link" href="visitors-detail-20261015-r2.png" target="_blank" rel="noreferrer">크게 보기 ↗</a></div>
+          <figure class="detail-screen"><a href="visitors-detail-20261015-r2.png" target="_blank" rel="noreferrer" aria-label="방문증 관리 원본 화면 보기"><img src="visitors-detail-20261015-r2.png" alt="가상 데이터로 구성한 HR-Admin 방문증 관리 실제 화면" width="1440" height="1080" /></a><figcaption>방문증 관리 · 실제 웹앱에 가상 데이터를 표시한 화면</figcaption></figure>
+        </article>
+        <article class="screen-panel" id="panel-patents" role="tabpanel" aria-labelledby="tab-patents" tabindex="0" hidden>
+          <div class="screen-panel-heading"><div><h3>기안부터 납부까지 네 단계로 확인</h3><p>납부기한과 비용을 한 목록에서 확인하고, 기안 필요·기안중·기안완료·납부완료 중 현재 상태를 선택해 저장합니다.</p></div><a class="text-link" href="patents-detail-20261015-r2.png" target="_blank" rel="noreferrer">크게 보기 ↗</a></div>
+          <figure class="detail-screen"><a href="patents-detail-20261015-r2.png" target="_blank" rel="noreferrer" aria-label="특허관리 원본 화면 보기"><img src="patents-detail-20261015-r2.png" alt="가상 데이터로 구성한 HR-Admin 특허관리 실제 화면" width="1440" height="1080" /></a><figcaption>특허관리 · 실제 웹앱에 가상 데이터를 표시한 화면</figcaption></figure>
+        </article>
+      </div>
+      <details class="workspace-example"><summary>공통 기능 · 개인 업무공간도 확인하기 <span aria-hidden="true">＋</span></summary><div class="screen-panel-heading"><div><h3>업무별 마감일·메모·진행 상태</h3><p>개인 업무공간에서 마감일과 메모를 기록하고 완료·검토 필요 상태를 구분합니다. 연간업무는 월별로 확인합니다.</p></div></div><figure class="detail-screen"><a href="workspace-detail-20261015-r2.png" target="_blank" rel="noreferrer"><img src="workspace-detail-20261015-r2.png" alt="가상 사용자 업무공간의 마감일·완료 표시와 메모 수정창" width="1440" height="1080" /></a><figcaption>개인 업무공간 · 메모 수정</figcaption></figure></details>
+      <p class="gallery-note">포트폴리오 화면은 실제 웹앱을 가상 데이터로 캡처했습니다. 개인정보와 사내 자료는 포함하지 않았으며, 여기서 입력한 값은 업무 시스템에 저장되지 않습니다.</p>
+    </section>
+
+    <section class="case-section container contribution-section" id="contribution" aria-labelledby="contribution-title">
+      <div class="section-label"><span class="section-number">05</span><h2 id="contribution-title">담당한 일</h2></div>
+      <div class="case-copy">
+        <p>기존 자료를 검토해 필요한 항목과 입력 순서를 정했습니다. 화면을 직접 사용하면서 날짜, 마감, 완료 표시와 수정 방식을 조정했습니다.</p>
+        <p>코드는 AI 도구와 협업해 작성했습니다. 업무 규칙을 결정하고 구현 결과를 확인하는 역할을 맡았습니다.</p>
+        <dl class="implementation-note"><div><dt>화면·서버</dt><dd>TypeScript, Hono</dd></div><div><dt>실행·저장</dt><dd>Cloudflare Workers, D1</dd></div></dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div><strong>HR-Admin</strong><span>인사·총무 업무관리</span></div>
+    <a class="text-link" href="https://github.com/yeS2su/hr-admin-portfolio" target="_blank" rel="noreferrer">GitHub 저장소 <span aria-hidden="true">↗</span></a>
+    <a class="back-to-top" href="#top" aria-label="페이지 처음으로 이동">↑</a>
+  </footer>
+  <script>
+  (() => {
+    const categories = Array.from(document.querySelectorAll('[data-category]'));
+    const tabs = Array.from(document.querySelectorAll('[data-screen]'));
+    const lastScreen = { hiring: 'onboarding', admin: 'expenses' };
+    const selectCategory = (group) => {
+      categories.forEach(tab => {
+        const active = tab.dataset.category === group;
+        tab.setAttribute('aria-selected', String(active));
+        tab.tabIndex = active ? 0 : -1;
+        document.getElementById(tab.getAttribute('aria-controls')).hidden = !active;
+      });
+    };
+    const selectScreen = (id) => {
+      const tab = tabs.find(item => item.dataset.screen === id);
+      if (!tab) return;
+      const groupPanel = tab.closest('[id^="group-"]');
+      const group = groupPanel.id.slice(6);
+      selectCategory(group);
+      lastScreen[group] = id;
+      groupPanel.querySelectorAll('[data-screen]').forEach(item => {
+        const active = item === tab;
+        item.setAttribute('aria-selected', String(active));
+        item.tabIndex = active ? 0 : -1;
+        document.getElementById(item.getAttribute('aria-controls')).hidden = !active;
+      });
+    };
+    const keyboard = (items, select) => items.forEach((tab, index) => {
+      tab.addEventListener('keydown', event => {
+        let next;
+        if (event.key === 'ArrowRight') next = (index + 1) % items.length;
+        else if (event.key === 'ArrowLeft') next = (index - 1 + items.length) % items.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = items.length - 1;
+        else return;
+        event.preventDefault();
+        select(items[next]);
+        items[next].focus();
+      });
+    });
+    categories.forEach(tab => tab.addEventListener('click', () => selectScreen(lastScreen[tab.dataset.category])));
+    keyboard(categories, tab => selectScreen(lastScreen[tab.dataset.category]));
+    categories.forEach(category => {
+      const groupTabs = tabs.filter(tab => tab.closest('[id^="group-"]').id === category.getAttribute('aria-controls'));
+      groupTabs.forEach(tab => tab.addEventListener('click', () => selectScreen(tab.dataset.screen)));
+      keyboard(groupTabs, tab => selectScreen(tab.dataset.screen));
+    });
+    document.querySelectorAll('[data-open-preview]').forEach(link => link.addEventListener('click', () => {
+      selectScreen(link.dataset.openPreview);
+      document.getElementById('tab-' + link.dataset.openPreview).focus({ preventScroll: true });
+    }));
+  })();
+  </script>
+</body>
+</html>

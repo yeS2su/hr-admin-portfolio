@@ -199,3 +199,68 @@ h1 { font-size: clamp(64px, 7.8vw, 104px); line-height: .98; letter-spacing: -.0
   .screen-panel-heading p { font-size: 18px; }
   .detail-screen { padding: 8px 8px 0; }
 }
+
+/* HR portfolio: context and demonstrated workflow before long screen captures. */
+.project-intro h1 { font-size: clamp(64px,7vw,92px); }
+.project-role { margin-top: 14px; max-width: 510px; color: var(--muted); font-size: 17px; line-height: 1.8; word-break: keep-all; }
+.project-context { row-gap: 24px; padding-block: 40px; }
+.project-context .case-copy p { font-size: 17px; line-height: 1.8; }
+.project-context .case-copy p + p { margin-top: 14px; }
+.workflow-comparison { grid-column: 1/-1; overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.workflow-comparison table { width: 100%; min-width: 620px; border-collapse: collapse; text-align: left; font-size: 16px; line-height: 1.7; }
+.workflow-comparison th, .workflow-comparison td { padding: 13px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.workflow-comparison thead th { background: #eef1e9; font-weight: 600; }
+.workflow-comparison tbody th { width: 112px; font-weight: 600; white-space: nowrap; }
+.workflow-comparison tbody tr:last-child > * { border-bottom: 0; }
+.validation-note { grid-column: 1/-1; margin: 0; padding: 15px 18px; color: #485442; background: #edf1e8; border-left: 3px solid var(--accent); font-size: 16px; line-height: 1.8; }
+.validation-note strong { display: inline-block; margin-right: 12px; color: var(--ink); font-weight: 600; }
+.workflow-demo { padding: 42px 0 58px; border-top: 1px solid var(--line); }
+.demo-steps { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 12px; margin: 0 0 22px; padding: 0; list-style: none; }
+.demo-steps li { min-width: 0; padding: 14px 12px; border-top: 2px solid var(--accent); color: #3f493f; font-size: 15px; line-height: 1.7; }
+.demo-steps span { display: block; margin-bottom: 4px; color: var(--accent); font-size: 13px; }
+.demo-player { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: #e9eee3; }
+.demo-player video { display: block; width: 100%; height: auto; background: #f4f6f8; }
+.demo-player figcaption { padding: 13px 16px; color: #53614b; font-size: 14px; line-height: 1.8; text-align: center; }
+#screens .app-home-image { height: 450px; object-fit: cover; object-position: center 40%; }
+#personal-workspace .detail-screen img { height: 540px; object-fit: cover; object-position: center 87%; }
+.image-viewer { width: 94vw; max-width: 1600px; height: 90vh; max-height: 90vh; padding: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); color: var(--ink); }
+.image-viewer[open] { display: flex; flex-direction: column; }
+.image-viewer::backdrop { background: rgb(15 25 16 / .74); }
+.image-viewer-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding: 12px 16px; border-bottom: 1px solid var(--line); flex-shrink: 0; }
+.image-viewer-toolbar h2 { font-size: 17px; font-weight: 600; }
+.image-viewer-toolbar > div { display: flex; flex-wrap: wrap; gap: 7px; }
+.image-viewer-toolbar button { min-height: 40px; padding: 7px 12px; border: 1px solid var(--line); border-radius: 5px; color: var(--ink); background: #fff; font: 500 14px/1.5 Pretendard,sans-serif; cursor: pointer; }
+.image-viewer-toolbar button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.image-viewer-content { flex: 1; min-height: 0; overflow: auto; background: #e9edf0; }
+.image-viewer-content img { display: block; width: auto; max-width: none; height: auto; }
+.image-viewer.is-fit .image-viewer-content img { width: 100%; max-width: 100%; }
+@media(max-width:760px) {
+  .demo-steps { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+  .workflow-demo .gallery-heading { flex-direction: column; gap: 12px; }
+  .project-context { padding-block: 32px; }
+}
+@media(max-width:620px) {
+  .project-role { font-size: 16px; }
+  .project-intro h1 { font-size: clamp(54px,16vw,76px); }
+  .project-context .case-copy p { font-size: 17px; }
+  .workflow-comparison th, .workflow-comparison td { padding: 11px 13px; }
+  .validation-note { padding: 13px; }
+  .validation-note strong { display: block; }
+  #screens .app-home-image { height: 250px; }
+  #personal-workspace .detail-screen img { height: 330px; }
+  .workflow-demo { padding-block: 32px 42px; }
+  .demo-steps li { padding-inline: 4px; font-size: 14px; }
+  .image-viewer-toolbar { padding: 10px; }
+}
+@media(max-width:620px) {
+  .workflow-comparison { border: 0; background: transparent; overflow: visible; }
+  .workflow-comparison table { display: block; min-width: 0; }
+  .workflow-comparison thead { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .workflow-comparison tbody { display: grid; gap: 12px; }
+  .workflow-comparison tbody tr { display: grid; gap: 5px; padding: 14px; border: 1px solid var(--line); border-radius: 8px; background: white; }
+  .workflow-comparison tbody th, .workflow-comparison tbody td { display: block; width: auto; padding: 0; border: 0; }
+  .workflow-comparison tbody th { margin-bottom: 5px; }
+  .workflow-comparison tbody td { font-size: 15px; }
+  .workflow-comparison tbody td:nth-child(2)::before { content: '기존  '; color: var(--muted); font-weight: 600; }
+  .workflow-comparison tbody td:nth-child(3)::before { content: '웹앱  '; color: var(--accent); font-weight: 600; }
+}

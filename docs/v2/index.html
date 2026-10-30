@@ -2,7 +2,7 @@
 <html lang="ko"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>HR-Admin | 인사총무 업무 개선 프로젝트</title><meta name="description" content="인사총무 실무에서 출발한 업무관리 웹앱. 업무 기준을 정리하고 AI 코딩 도구로 구현한 과정을 실제 화면으로 소개합니다."/>
 <meta property="og:title" content="HR-Admin | 인사총무 업무 개선 프로젝트"/><meta property="og:description" content="입사 준비부터 자산 반납 안내까지, 실무에서 필요한 흐름을 웹앱에 담았습니다."/><meta property="og:type" content="website"/><meta property="og:locale" content="ko_KR"/><meta property="og:url" content="https://yes2su.github.io/hr-admin-portfolio/v2/"/><meta property="og:image" content="https://yes2su.github.io/hr-admin-portfolio/og-image.png"/>
-<link rel="canonical" href="https://yes2su.github.io/hr-admin-portfolio/v2/"/><link rel="icon" href="../favicon.svg" type="image/svg+xml"/><link rel="preload" href="../fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin/><link rel="stylesheet" href="styles.css?v=20261030-r3"/>
+<link rel="canonical" href="https://yes2su.github.io/hr-admin-portfolio/v2/"/><link rel="icon" href="../favicon.svg" type="image/svg+xml"/><link rel="preload" href="../fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin/><link rel="stylesheet" href="styles.css?v=20261030-r4"/>
 </head><body><a class="skip-link" href="#main">본문으로 이동</a>
 <header class="site-header"><div class="container header-inner"><a class="wordmark" href="#top" aria-label="HR-Admin 처음으로">HR-Admin</a><nav aria-label="페이지 메뉴"><a href="#background">만든 배경</a><a href="#screens">업무공간</a><a href="#details">업무별 화면</a><a href="#demo">동작 시연</a></nav><a class="version-link" href="../">기존 버전</a></div></header>
 <main id="main">
@@ -11,7 +11,7 @@
  <dl class="cover-facts"><div><dt>사용 대상</dt><dd>인사·총무 담당자</dd></div><div><dt>프로젝트 범위</dt><dd>업무일지 / 채용·입사 / 총무관리</dd></div><div><dt>제작 방식</dt><dd>업무 항목 설계 및 AI 코딩 도구를 활용한 구현</dd></div><div><dt>현재 단계</dt><dd>가상 데이터로 주요 기능을 확인한 프로토타입</dd></div></dl>
 </div></section>
 <section class="context container" id="background" aria-labelledby="background-title">
- <div class="context-heading"><h2 id="background-title">흩어진 업무 기록을<br/>업무별로 모았습니다</h2><p>업무일지, 채용 현황, 자산대장이 각각 다른 파일에 있었습니다. 필요한 내용을 찾으려면 여러 자료를 번갈아 확인해야 했습니다.</p></div>
+ <div class="context-heading"><h2 id="background-title">흩어진 업무 기록을 업무별로 모았습니다</h2><p>업무일지, 채용 현황, 자산대장이 각각 다른 파일에 있었습니다. 필요한 내용을 찾으려면 여러 자료를 번갈아 확인해야 했습니다.</p></div>
  <div class="context-content">
  <h3 class="changes-title">기존 파일 관리에서 달라진 점</h3>
  <div class="changes" role="table" aria-label="기존 업무 방식과 웹앱에서 달라진 점">
@@ -22,11 +22,11 @@
  </div></div>
 </section>
 <section class="workspace-band" id="screens" aria-labelledby="screen-title"><div class="container">
- <div class="section-heading"><h2 id="screen-title">팀 일정과<br/>개인 업무 현황</h2><p>팀의 월간 일정과 개인의 일일 업무를<br class="desktop-break"/> 나눠 확인할 수 있게 구성했습니다.</p></div>
+ <div class="section-heading"><h2 id="screen-title">팀 일정과 개인 업무 현황</h2><p>팀의 월간 일정과 개인의 일일 업무를 나눠 확인할 수 있게 구성했습니다.</p></div>
  <div class="workspaces"><article class="team-workspace"><h3>팀 업무공간</h3><p>팀원별 업무 현황과 월간 업무를 보여줍니다.</p><figure><a class="workspace-window team-window" href="team@2x.webp" target="_blank" rel="noreferrer" aria-label="팀 업무공간 원본 화면 보기"><img src="team@2x.webp" width="2736" height="732" alt="가상 사용자 A B C의 월간 업무와 총무비용 일정" loading="lazy"/></a><figcaption>팀의 일정과 진행 현황</figcaption></figure></article>
  <article class="personal-workspace" id="personal-workspace"><h3 id="personal-workspace-title">각자의 업무공간</h3><p>업무 내용, 분류, 마감일, 메모, 완료 상태를 함께 관리합니다. 필요한 분류를 추가하고, 분류가 비어 있는 업무를 모아 보완할 수 있습니다.</p><figure><a class="workspace-window personal-window" href="workspace@2x.webp" target="_blank" rel="noreferrer" aria-label="개인 업무공간 원본 화면 보기"><img src="workspace@2x.webp" width="2880" height="3176" alt="개인 업무공간의 업무 등록, 분류 추가, 마감일과 완료 상태" loading="lazy"/></a><figcaption>일일·월간 업무와 분류 관리</figcaption></figure></article></div>
 </div></section>
-<section class="gallery container" id="details" aria-labelledby="details-title"><div class="section-heading" id="features"><h2 id="details-title">채용·입사 및<br/>총무관리 화면</h2><p>입사 준비, 이력서 송부, 면접 일정과<br class="desktop-break"/> 비용·자산관리 화면입니다.</p></div>
+<section class="gallery container" id="details" aria-labelledby="details-title"><div class="section-heading" id="features"><h2 id="details-title">채용·입사 및 총무관리 화면</h2><p>입사 준비, 이력서 송부, 면접 일정과 비용·자산관리 화면입니다.</p></div>
       <div class="gallery-switch" role="tablist" aria-label="업무 대분류">
         <button type="button" role="tab" id="category-hiring" data-category="hiring" aria-controls="group-hiring" aria-selected="true">채용·입사</button>
         <button type="button" role="tab" id="category-admin" data-category="admin" aria-controls="group-admin" aria-selected="false" tabindex="-1">총무관리</button>

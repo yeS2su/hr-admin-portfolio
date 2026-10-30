@@ -203,3 +203,10 @@ figcaption { margin-top:var(--space-sm); font-size:var(--text-sm); color:var(--c
  .team-workspace figure { padding-inline:16px; }
 }
 
+/* Keep section titles and their explanations together; avoid forced two-column breaks. */
+.context-heading { display:block; }
+.context-heading h2 { max-width:none; }
+.context-heading p { margin-top:var(--space-md); max-width:64ch; }
+.section-heading { display:block; margin-bottom:var(--space-xl); }
+.section-heading > p { margin-top:var(--space-md); max-width:64ch; }
+

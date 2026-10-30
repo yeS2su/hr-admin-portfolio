@@ -169,3 +169,37 @@ figcaption { margin-top:var(--space-sm); font-size:var(--text-sm); color:var(--c
 
 .team-window { aspect-ratio:auto; }
 .team-window img { height:auto; }
+
+/* The before/after story should be readable before the feature gallery. */
+.context { display:block; }
+.context-heading { display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:clamp(40px,5vw,80px); align-items:end; }
+.context-heading h2 { max-width:13ch; }
+.context-heading p { max-width:46ch; justify-self:start; }
+.context-content { margin-top:var(--space-xl); }
+.changes-title { margin:0 0 var(--space-sm); font-size:var(--text-sm); font-weight:600; color:var(--color-muted); }
+.changes { border-top:1px solid var(--color-rule); }
+.changes > div { display:grid; grid-template-columns:minmax(88px,1fr) minmax(0,1.35fr) minmax(0,1.65fr); gap:var(--space-md); align-items:start; padding-block:var(--space-md); border-top:0; border-bottom:1px solid var(--color-rule); }
+.changes .changes-header { padding-block:var(--space-sm); font-size:var(--text-sm); color:var(--color-muted); background:transparent; }
+.changes h3 { font-size:var(--text-sm); font-weight:650; color:var(--color-ink); }
+.changes p { font-size:var(--text-sm); line-height:1.65; }
+.section-heading { display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); align-items:end; justify-content:initial; gap:clamp(32px,5vw,72px); }
+.section-heading > p { width:100%; max-width:40ch; justify-self:start; }
+.team-workspace figure { padding-inline:clamp(20px,4vw,56px); }
+.team-window { background:var(--color-paper-2); }
+@media(max-width:60rem) {
+ .context-heading { grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:var(--space-xl); }
+ .section-heading { grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:var(--space-xl); }
+}
+@media(max-width:40rem) {
+ .context-heading { grid-template-columns:minmax(0,1fr); gap:var(--space-sm); }
+ .context-content { margin-top:var(--space-lg); }
+ .changes > div { grid-template-columns:minmax(0,1fr); gap:var(--space-xs); padding-block:var(--space-md); }
+ .changes .changes-header { display:none; }
+ .changes h3 { margin-bottom:var(--space-2xs); }
+ .changes p:first-of-type::before { content:'기존 · '; font-weight:600; color:var(--color-ink); }
+ .changes p + p::before { content:'웹앱에서 · '; font-weight:600; color:var(--color-ink); }
+ .section-heading { display:flex; align-items:flex-start; flex-direction:column; gap:var(--space-sm); }
+ .section-heading > p { max-width:42ch; }
+ .team-workspace figure { padding-inline:16px; }
+}
+

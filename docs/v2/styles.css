@@ -184,8 +184,8 @@ figcaption { margin-top:var(--space-sm); font-size:var(--text-sm); color:var(--c
 .changes p { font-size:var(--text-sm); line-height:1.65; }
 .section-heading { display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); align-items:end; justify-content:initial; gap:clamp(32px,5vw,72px); }
 .section-heading > p { width:100%; max-width:40ch; justify-self:start; }
-.team-workspace figure { padding-inline:clamp(20px,4vw,56px); }
-.team-window { background:var(--color-paper-2); }
+.team-workspace figure { padding-inline:0; }
+.team-window { background:var(--color-paper-2); box-sizing:border-box; padding:clamp(28px,4vw,56px) clamp(20px,3vw,40px) clamp(20px,2vw,28px) clamp(36px,6vw,80px); }
 @media(max-width:60rem) {
  .context-heading { grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:var(--space-xl); }
  .section-heading { grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:var(--space-xl); }
@@ -200,7 +200,7 @@ figcaption { margin-top:var(--space-sm); font-size:var(--text-sm); color:var(--c
  .changes p + p::before { content:'웹앱에서 · '; font-weight:600; color:var(--color-ink); }
  .section-heading { display:flex; align-items:flex-start; flex-direction:column; gap:var(--space-sm); }
  .section-heading > p { max-width:42ch; }
- .team-workspace figure { padding-inline:16px; }
+ .team-workspace figure { padding-inline:0; }
 }
 
 /* Keep section titles and their explanations together; avoid forced two-column breaks. */
@@ -209,4 +209,5 @@ figcaption { margin-top:var(--space-sm); font-size:var(--text-sm); color:var(--c
 .context-heading p { margin-top:var(--space-md); max-width:64ch; }
 .section-heading { display:block; margin-bottom:var(--space-xl); }
 .section-heading > p { margin-top:var(--space-md); max-width:64ch; }
+@media(max-width:40rem) { .team-window { padding:28px 16px 20px 36px; } }
 

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://yes2su.github.io/hr-admin-portfolio/">
+<meta name="theme-color" content="#f7f7f2">
+<meta name="description" content="인사·총무 실무자가 AI를 활용해 만든 작업물 모음 — 업무관리 웹앱, 최종합격 안내 메일, 신입사원 온보딩 페이지, 웰컴키트 띠지">
+<title>HR × AI Works | 인사·총무 AI 작업물</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f7f2;--ink:#232923;--sub:#5f665f;--mute:#8b918b;--line:#e3e4dc;--card:#ffffff;--soft:#eef0e7;--acc:#7f9a6e;--acc-ink:#4f6644}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Pretendard,"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;word-break:keep-all}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:rgba(247,247,242,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;letter-spacing:-.2px}
+.brand b{display:grid;place-items:center;width:26px;height:26px;border-radius:7px;background:var(--ink);color:#fff;font-size:13px}
+.brand span{color:var(--mute);font-weight:500;font-size:13px;padding-left:10px;border-left:1px solid var(--line)}
+.gh{font-size:14px;font-weight:600;text-decoration:none}
+
+/* hero */
+.hero{padding:72px 0 40px}
+.eyebrow{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--sub)}
+.eyebrow:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--acc)}
+h1{font-size:clamp(40px,7vw,72px);line-height:1.05;letter-spacing:-2.5px;margin:14px 0 18px;font-weight:800}
+h1 i{font-style:normal;color:var(--acc)}
+.lead{font-size:18px;color:var(--sub);max-width:640px;margin:0}
+
+/* tabs */
+.tabs{position:sticky;top:64px;z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
+.tabs .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.tabs .wrap::-webkit-scrollbar{display:none}
+.tab{flex:none;appearance:none;border:0;background:none;font:inherit;font-size:15px;font-weight:600;color:var(--mute);padding:16px 14px 14px;border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected=true]{color:var(--ink);border-color:var(--ink)}
+.tab small{font-size:12px;font-weight:600;color:var(--mute);margin-left:4px}
+
+main.wrap{padding-top:56px;padding-bottom:96px}
+.panel[hidden]{display:none}
+
+/* overview cards */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;transition:transform .15s,box-shadow .15s;cursor:pointer;text-align:left;font:inherit;color:inherit;padding:0}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(35,41,35,.08)}
+.thumb{aspect-ratio:16/9;background:var(--soft);overflow:hidden;display:grid;place-items:center}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:top}
+.card .body{padding:18px 20px 22px}
+.kind{font-size:12px;font-weight:700;color:var(--acc-ink);letter-spacing:.3px}
+.card h3{margin:6px 0 6px;font-size:19px;letter-spacing:-.4px}
+.card p{margin:0;color:var(--sub);font-size:14.5px}
+
+/* detail */
+.sec-head{display:flex;align-items:baseline;gap:12px;margin:0 0 6px}
+.sec-head .no{font-size:13px;color:var(--mute);font-weight:600}
+h2{font-size:30px;letter-spacing:-1px;margin:0;line-height:1.25}
+.intro{color:var(--sub);font-size:16px;max-width:720px;margin:10px 0 28px}
+.meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 0 36px}
+.meta div{padding:16px 18px 16px 0}
+.meta div+div{padding-left:18px;border-left:1px solid var(--line)}
+.meta dt{font-size:13px;color:var(--mute)}
+.meta dd{margin:4px 0 0;font-weight:600;font-size:15px}
+h3.sub{font-size:18px;margin:44px 0 14px;letter-spacing:-.3px}
+.frame{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:18px}
+.frame img{border-radius:10px;background:#fff}
+.cap{font-size:13px;color:var(--mute);text-align:center;margin:12px 0 0}
+
+/* before/after */
+.ba{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}
+.ba figure{margin:0}
+.badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.5px;padding:4px 10px;border-radius:999px;margin-bottom:10px}
+.badge.b{background:#e7e7e2;color:#6b706b}
+.badge.a{background:var(--ink);color:#fff}
+.ba .frame{padding:12px}
+
+table.cmp{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:14.5px}
+.cmp th,.cmp td{text-align:left;padding:14px 16px;border-top:1px solid var(--line);vertical-align:top}
+.cmp thead th{background:var(--soft);border-top:0;font-size:13px;color:var(--sub)}
+.cmp td:first-child{font-weight:700;white-space:nowrap}
+.cmp td:nth-child(2){color:var(--mute)}
+
+ul.points{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+ul.points li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 40px;position:relative;font-size:15px}
+ul.points li:before{content:"";position:absolute;left:18px;top:23px;width:7px;height:7px;border-radius:50%;background:var(--acc)}
+ul.points b{display:block;margin-bottom:2px}
+ul.points span{color:var(--sub);font-size:14px}
+
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:13px 20px;border-radius:10px;margin-top:8px}
+.note{font-size:13px;color:var(--mute);margin-top:24px}
+
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px}
+
+@media (max-width:760px){
+ .grid,.ba,.two{grid-template-columns:1fr}
+ .meta{grid-template-columns:1fr}
+ .meta div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+ h2{font-size:24px}
+ .hero{padding:48px 0 28px}
+ .brand span{display:none}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap bar">
+  <a class="brand" href="#all"><b>H</b>HR × AI Works<span>인사·총무 AI 작업물</span></a>
+  <a class="gh" href="https://github.com/yeS2su/hr-admin-portfolio">GitHub ↗</a>
+ </div>
+</header>
+
+<section class="hero">
+ <div class="wrap">
+  <div class="eyebrow">인사·총무 실무자가 AI를 활용해 만든 작업물</div>
+  <h1>HR × AI Works<i>.</i></h1>
+  <p class="lead">반복되는 실무를 줄이고, 입사자 경험을 더 좋게 만들기 위해 AI와 함께 만든 결과물을 모았습니다. 필요한 기준과 방향은 직접 정하고, 구현과 시안 작업에 AI를 활용했습니다.</p>
+ </div>
+</section>
+
+<nav class="tabs" aria-label="작업물 분류">
+ <div class="wrap" role="tablist">
+  <button class="tab" role="tab" data-id="all">전체<small>4</small></button>
+  <button class="tab" role="tab" data-id="webapp">업무관리 웹앱</button>
+  <button class="tab" role="tab" data-id="mail">합격 안내 메일</button>
+  <button class="tab" role="tab" data-id="onboarding">온보딩 페이지</button>
+  <button class="tab" role="tab" data-id="welcome-kit">웰컴키트 띠지</button>
+ </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ALL -->
+<section class="panel" id="p-all" role="tabpanel">
+ <div class="grid">
+  <button class="card" data-go="webapp">
+   <div class="thumb"><img src="works-hr-admin-hero.jpg" alt="HR-Admin 프로젝트 소개 화면"></div>
+   <div class="body"><div class="kind">WEB APP</div><h3>HR-Admin 업무관리 웹앱</h3><p>엑셀 파일에 흩어져 있던 업무일지·채용·자산 관리를 한 화면으로 모은 웹앱</p></div>
+  </button>
+  <button class="card" data-go="mail">
+   <div class="thumb"><img src="works-mail-after.jpg" alt="리디자인한 최종합격 안내 메일"></div>
+   <div class="body"><div class="kind">EMAIL DESIGN</div><h3>최종합격 안내 메일 리디자인</h3><p>표 형태의 안내 메일을 회사 캐릭터를 활용한 환영 메일로 다시 디자인</p></div>
+  </button>
+  <button class="card" data-go="onboarding">
+   <div class="thumb"><img src="works-onboarding-hub-top.jpg" alt="신입사원 온보딩 노션 페이지"></div>
+   <div class="body"><div class="kind">NOTION</div><h3>신입사원 온보딩 페이지</h3><p>입사 첫날부터 적응까지 필요한 안내를 한곳에 모은 노션 가이드북</p></div>
+  </button>
+  <button class="card" data-go="welcome-kit">
+   <div class="thumb"><img src="works-band-mockup.jpg" alt="웰컴키트 띠지 목업"></div>
+   <div class="body"><div class="kind">PRINT DESIGN</div><h3>웰컴키트 포장 띠지</h3><p>신규 입사자 웰컴키트 박스에 두르는 띠지 디자인</p></div>
+  </button>
+ </div>
+</section>
+
+<!-- WEBAPP -->
+<section class="panel" id="p-webapp" role="tabpanel" hidden>
+ <div class="sec-head"><span class="no">01</span><h2>HR-Admin 업무관리 웹앱</h2></div>
+ <p class="intro">파일을 오가며 확인하던 업무를 한곳에서 관리할 수 있도록 만들었습니다. 실무에 필요한 항목과 처리 기준을 정하고, AI로 구현한 화면과 기능을 직접 확인하며 다듬었습니다.</p>
+ <dl class="meta">
+  <div><dt>사용 대상</dt><dd>인사·총무 담당자</dd></div>
+  <div><dt>직접 정한 부분</dt><dd>입력 항목·업무 규칙·처리 순서</dd></div>
+  <div><dt>사용 기술</dt><dd>TypeScript · Hono · Cloudflare Workers · D1</dd></div>
+ </dl>
+ <div class="frame"><img src="works-hr-admin-hero.jpg" alt="HR-Admin 프로젝트 소개 페이지"></div>
+ <h3 class="sub">주요 기능</h3>
+ <div class="two">
+  <ul class="points">
+   <li><b>채용·입사</b><span>입사 체크리스트, 이력서 송부 체크, 면접 일정, 경영진면접 관리</span></li>
+   <li><b>업무공간</b><span>팀·개인 업무를 분류·마감일·처리 상태로 관리</span></li>
+  </ul>
+  <ul class="points">
+   <li><b>총무관리</b><span>총무비용, 자산관리대장, 방문증 관리, 특허관리</span></li>
+   <li><b>기존 기록 검색</b><span>이전 업무일지를 시트와 내용으로 검색</span></li>
+  </ul>
+ </div>
+ <a class="btn" href="hr-admin.html">프로젝트 상세 페이지 보기 ↗</a>
+ <p class="note">동작 시연 영상과 메뉴별 상세 화면은 상세 페이지에서 볼 수 있습니다. 모든 화면은 가상 데이터로 구성했습니다.</p>
+</section>
+
+<!-- MAIL -->
+<section class="panel" id="p-mail" role="tabpanel" hidden>
+ <div class="sec-head"><span class="no">02</span><h2>최종합격 안내 메일 리디자인</h2></div>
+ <p class="intro">합격자가 처음 받는 회사 메일을 정보 전달용 표에서 환영의 첫인상을 주는 메일로 바꿨습니다. 디자인 방향과 문구를 직접 정하고, 시안 제작과 HTML 코딩은 AI(Claude)와 함께 진행했습니다.</p>
+ <dl class="meta">
+  <div><dt>대상</dt><dd>최종 합격자</dd></div>
+  <div><dt>직접 정한 부분</dt><dd>레이아웃·색감·문구·캐릭터 연출</dd></div>
+  <div><dt>발송 환경</dt><dd>Outlook · 사내 그룹웨어</dd></div>
+ </dl>
+
+ <div class="ba">
+  <figure><span class="badge b">BEFORE</span><div class="frame"><img src="works-mail-before.jpg" alt="기존 최종합격 안내 메일"></div></figure>
+  <figure><span class="badge a">AFTER</span><div class="frame"><img src="works-mail-after.jpg" alt="리디자인한 최종합격 안내 메일"></div></figure>
+ </div>
+ <p class="cap">개인정보는 가상 이름(홍길동)으로 바꿨습니다.</p>
+
+ <h3 class="sub">무엇을 바꿨나</h3>
+ <table class="cmp">
+  <thead><tr><th>항목</th><th>기존</th><th>변경</th></tr></thead>
+  <tbody>
+   <tr><td>첫인상</td><td>‘채용전형안내’ 범용 배너</td><td>회사 캐릭터 데솔이와 ‘WELCOME TO DATASOLUTION’ 배너</td></tr>
+   <tr><td>정보 구조</td><td>성함·일시·장소·서류를 한 표에 나열</td><td>인사말 → 입사 정보 → 구비 서류 순서의 섹션 구성</td></tr>
+   <tr><td>가독성</td><td>항목명과 값의 구분이 약함</td><td>아이콘 제목, 회색 항목명·진한 값, 행 구분선</td></tr>
+   <tr><td>운영 편의</td><td>매번 전체를 다시 편집</td><td>이름과 입사 정보 4개 항목만 텍스트로 수정, 나머지는 이미지로 고정</td></tr>
+  </tbody>
+ </table>
+
+ <h3 class="sub">작업 과정에서 해결한 문제</h3>
+ <ul class="points">
+  <li><b>Outlook에서 서식이 깨지는 문제</b><span>Outlook은 메일을 Word 엔진으로 그려 색·줄 간격·글머리표가 바뀝니다. 바뀌면 안 되는 부분은 이미지로, 사람마다 달라지는 부분만 텍스트로 나눠 구성했습니다.</span></li>
+  <li><b>그룹웨어에서 생기는 여백</b><span>스타일이 제거되는 환경에서도 이미지 사이 틈이 생기지 않도록 HTML 기본 속성으로 배치를 고정했습니다.</span></li>
+  <li><b>캐릭터 연출</b><span>회사 로비의 캐릭터 사진을 오려 본문 박스에 손을 걸친 형태로 배치해 배너와 본문을 자연스럽게 연결했습니다.</span></li>
+ </ul>
+</section>
+
+<!-- ONBOARDING -->
+<section class="panel" id="p-onboarding" role="tabpanel" hidden>
+ <div class="sec-head"><span class="no">03</span><h2>신입사원 온보딩 페이지</h2></div>
+ <p class="intro">입사 첫날부터 적응 완료까지, 신규 입사자가 겪는 질문에 답하는 노션 가이드북입니다. 담당자에게 반복해서 오던 질문을 주제별로 정리해 스스로 찾아볼 수 있도록 구성했습니다.</p>
+ <dl class="meta">
+  <div><dt>대상</dt><dd>신규 입사자</dd></div>
+  <div><dt>도구</dt><dd>Notion · Notion Sites</dd></div>
+  <div><dt>운영 방식</dt><dd>피드백을 받아 계속 보완하는 문서</dd></div>
+ </dl>
+ <div class="frame"><img src="works-onboarding-hub-top.jpg" alt="온보딩 페이지 상단"></div>
+ <h3 class="sub">페이지 구성</h3>
+ <div class="two">
+  <ul class="points">
+   <li><b>👋 시작하기</b><span>입사 첫날 체크리스트, 장비 세팅, 계정 생성</span></li>
+   <li><b>🏢 우리 회사 이해하기</b><span>회사가 하는 일과 사내 용어</span></li>
+   <li><b>🧭 회사생활</b><span>급여·연차·수습평가·휴가 사용 방법</span></li>
+  </ul>
+  <ul class="points">
+   <li><b>🤝 비즈니스 매너 & 커뮤니케이션</b><span>메일·전화·보고·회의 기본 매너</span></li>
+   <li><b>🗺️ 회사 주변 꿀팁</b><span>맛집·카페·편의시설·출퇴근 팁</span></li>
+   <li><b>💬 FAQ / 피드백</b><span>자주 묻는 질문과 개선 제보 창구</span></li>
+  </ul>
+ </div>
+ <h3 class="sub">빠른 찾기 안내</h3>
+ <div class="frame"><img src="works-onboarding-hub-list.jpg" alt="온보딩 페이지 목차 화면"></div>
+ <p class="note">사내 규정과 내부 정보는 제외하고 페이지 구성만 소개합니다.</p>
+</section>
+
+<!-- WELCOME KIT -->
+<section class="panel" id="p-welcome-kit" role="tabpanel" hidden>
+ <div class="sec-head"><span class="no">04</span><h2>웰컴키트 포장 띠지</h2></div>
+ <p class="intro">신규 입사자에게 전달하는 웰컴키트 박스에 두르는 띠지입니다. 회사 캐릭터와 ‘WELCOME KIT’ 문구를 중심으로, 박스를 받았을 때 환영받는 느낌이 들도록 구성했습니다.</p>
+ <dl class="meta">
+  <div><dt>대상</dt><dd>신규 입사자 웰컴키트</dd></div>
+  <div><dt>규격</dt><dd>1040 × 110 mm</dd></div>
+  <div><dt>적용</dt><dd>포장 케이스 (370 × 280 × 113 mm)</dd></div>
+ </dl>
+ <div class="frame"><img src="works-band-mockup.jpg" alt="웰컴키트 박스에 띠지를 두른 목업"></div>
+ <p class="cap">박스 적용 목업</p>
+ <h3 class="sub">띠지 전개도</h3>
+ <div class="frame"><img src="works-band-flat.jpg" alt="웰컴키트 띠지 전개도"></div>
+ <p class="cap">가운데 면이 박스 정면에 오도록 설계</p>
+</section>
+
+</main>
+
+<footer>
+ <div class="wrap"><span>HR × AI Works · 인사·총무 AI 작업물</span><a href="#all">↑ 맨 위로</a></div>
+</footer>
+
+<script>
+(function(){
+ var ids=['all','webapp','mail','onboarding','welcome-kit'];
+ var tabs=[].slice.call(document.querySelectorAll('.tab'));
+ function show(id,scroll){
+  if(ids.indexOf(id)<0) id='all';
+  tabs.forEach(function(t){t.setAttribute('aria-selected',t.dataset.id===id?'true':'false')});
+  ids.forEach(function(i){document.getElementById('p-'+i).hidden=(i!==id)});
+  if(scroll){var m=document.querySelector('main'),t=document.querySelector('.tabs'),h=document.querySelector('header');window.scrollTo({top:m.offsetTop-h.offsetHeight-t.offsetHeight,behavior:'smooth'})}
+ }
+ function go(id){ if(location.hash==='#'+id){show(id,true)} else {location.hash=id} }
+ tabs.forEach(function(t){t.addEventListener('click',function(){go(t.dataset.id)})});
+ [].forEach.call(document.querySelectorAll('[data-go]'),function(c){c.addEventListener('click',function(){go(c.dataset.go)})});
+ window.addEventListener('hashchange',function(){show(location.hash.slice(1),true)});
+ show(location.hash.slice(1),false);
+})();
+</script>
+</body>
+</html>

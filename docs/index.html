@@ -6,7 +6,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://yes2su.github.io/hr-admin-portfolio/">
 <meta name="theme-color" content="#f7f7f2">
-<meta name="description" content="인사·총무 실무자가 AI를 활용해 만든 작업물 모음 — 업무관리 웹앱, 최종합격 안내 메일, 신입사원 온보딩 페이지, 웰컴키트 띠지">
+<meta name="description" content="인사·총무 실무자가 AI를 활용해 만든 작업물 모음 — 업무관리 웹앱, 최종합격 안내 메일, 신입사원 온보딩 페이지, 웰컴키트 띠지, 주차할인 자동등록 웹앱">
 <title>HR × AI Works | 인사·총무 AI 작업물</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -112,6 +112,37 @@ ul.points span{color:var(--sub);font-size:14px}
 .gal figcaption{font-size:13.5px;color:var(--sub);margin-top:10px}
 .gal figcaption b{color:var(--ink);margin-right:6px}
 @media (max-width:760px){.sitemap,.gal{grid-template-columns:1fr}}
+.pkrow{display:grid;grid-template-columns:3fr 2fr;gap:28px;align-items:center;margin-bottom:28px}
+.pkrow figure{margin:0}
+.pkrow .frame{padding:10px}
+.pkrow .frame.phone{height:520px}
+.pkrow .frame.phone img{height:100%;width:auto;margin:0 auto;background:none}
+.pkrow.wide{grid-template-columns:1fr;gap:18px}
+.pkrow.wide .pktext{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.pkrow.wide .why{margin:0}
+.pkrow.wide .pktext h4{grid-column:1/-1;margin:0}
+.pktext h4{margin:0 0 10px;font-size:17px;letter-spacing:-.3px}
+@media (max-width:760px){.pkrow,.pkrow.wide .pktext{grid-template-columns:1fr}.pkrow .frame.phone{height:auto}.pkrow .frame.phone img{width:100%;height:auto}}
+ol.steps{margin:0;padding:0 0 0 20px;color:var(--sub);font-size:14.5px;line-height:1.8}
+.why{margin:14px 0 0;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;color:var(--sub)}
+.why b{display:block;color:var(--ink);margin-bottom:4px;font-size:14.5px}
+.arch{display:flex;align-items:stretch;gap:10px}
+.arch i{font-style:normal;align-self:center;color:var(--acc);font-weight:700;font-size:20px}
+.an{flex:1;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.an b{display:block;font-size:15.5px}.an span{display:block;color:var(--sub);font-size:13.5px}.an small{display:block;color:var(--mute);font-size:12.5px;margin-top:6px}
+.an.dark{background:var(--ink);color:#fff;border-color:var(--ink)}.an.dark span{color:#c9cec6}.an.dark small{color:#9aa29a}
+@media (max-width:760px){.arch{flex-direction:column}.arch i{transform:rotate(90deg)}}
+.guard td:nth-child(2){color:var(--sub)}
+.guard td:last-child{white-space:nowrap}
+.st{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:#ecece6;color:#6b706b}
+.st.on{background:#e9eee2;color:var(--acc-ink)}
+.flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;counter-reset:f}
+.flow li{list-style:none;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 14px 16px;font-size:14px;position:relative}
+.flow li:before{counter-increment:f;content:counter(f);display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;font-size:12px;font-weight:700;margin-bottom:8px}
+.flow b{display:block;font-size:14.5px;margin-bottom:2px}
+.flow span{color:var(--sub);font-size:13px}
+ol.flow{margin:0;padding:0}
+@media (max-width:760px){.flow{grid-template-columns:1fr}}
 footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-size:13px}
 footer .wrap{display:flex;justify-content:space-between;gap:12px}
 
@@ -143,11 +174,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px}
 
 <nav class="tabs" aria-label="작업물 분류">
  <div class="wrap" role="tablist">
-  <button class="tab" role="tab" data-id="all">전체<small>4</small></button>
+  <button class="tab" role="tab" data-id="all">전체<small>5</small></button>
   <button class="tab" role="tab" data-id="webapp">업무관리 웹앱</button>
   <button class="tab" role="tab" data-id="mail">합격 안내 메일</button>
   <button class="tab" role="tab" data-id="onboarding">온보딩 페이지</button>
   <button class="tab" role="tab" data-id="welcome-kit">웰컴키트 띠지</button>
+  <button class="tab" role="tab" data-id="parking">주차할인 자동등록</button>
  </div>
 </nav>
 
@@ -171,6 +203,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px}
   <button class="card" data-go="welcome-kit">
    <div class="thumb"><img src="works-band-mockup.jpg" alt="웰컴키트 띠지 목업"></div>
    <div class="body"><div class="kind">PRINT DESIGN <span class="ai">Google Nano Banana</span></div><h3>웰컴키트 포장 띠지</h3><p>신규 입사자 웰컴키트 박스에 두르는 띠지 디자인</p></div>
+  </button>
+  <button class="card" data-go="parking">
+   <div class="thumb"><img src="works-parking-thumb.jpg" alt="업체 콘솔과 주차등록 웹앱 비교"></div>
+   <div class="body"><div class="kind">WEB APP <span class="ai">Claude</span></div><h3>임직원 주차할인 자동등록 웹앱</h3><p>담당자가 수동으로 등록하던 주차할인을 임직원이 개인 코드로 직접 등록하도록 고안한 웹앱</p></div>
   </button>
  </div>
 </section>
@@ -292,6 +328,81 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px}
  <p class="cap">가운데 면이 박스 정면에 오도록 설계</p>
 </section>
 
+<!-- PARKING -->
+<section class="panel" id="p-parking" role="tabpanel" hidden>
+ <div class="sec-head"><span class="no">05</span><h2>임직원 주차할인 자동등록 웹앱</h2></div>
+ <p class="intro">주차할인은 업체 관리자 계정으로 로그인해야만 등록할 수 있어, 임직원이 요청할 때마다 담당자가 대신 등록해 왔습니다. 업체 시스템이 내부적으로 사용하는 API를 확인해 연결하고, 임직원이 로그인 없이 개인 코드와 차량번호만으로 직접 등록하는 웹앱을 고안했습니다. 코드 작성은 Claude와 함께 진행했고, 차량 조회와 할인 적용이 실제로 동작하는지 직접 확인하며 실사용 가능한 수준까지 완성했습니다.</p>
+ <dl class="meta">
+  <div><dt>사용 AI</dt><dd>Claude</dd></div>
+  <div><dt>직접 정한 부분</dt><dd>등록 흐름·개인 코드 방식·적용 항목</dd></div>
+  <div><dt>사용 기술</dt><dd>Google Apps Script · Google Sheets</dd></div>
+ </dl>
+
+ <div class="pkrow wide">
+  <figure>
+   <span class="badge b">BEFORE</span>
+   <div class="frame"><img src="works-parking-before.jpg" alt="주차관리 업체 관리자 콘솔 화면"></div>
+  </figure>
+  <div class="pktext">
+   <h4>담당자가 업체 콘솔에 로그인해 대신 등록</h4>
+   <ol class="steps">
+    <li>임직원이 담당자에게 차량번호와 함께 할인 요청</li>
+    <li>담당자가 업체 관리자 계정으로 콘솔에 로그인</li>
+    <li>차량번호 4자리로 입차 차량 조회</li>
+    <li>할인 항목 2종을 하나씩 선택해 적용</li>
+   </ol>
+   <p class="why"><b>직접 등록할 수 없었던 이유</b>할인 등록은 회사에 발급된 업체 관리자 계정으로만 가능합니다. 이 계정으로는 크레딧 충전과 유료 할인까지 다룰 수 있어 임직원에게 공유할 수 없었고, 모든 요청이 담당자를 거쳐야 했습니다.</p>
+  </div>
+ </div>
+ <div class="pkrow">
+  <figure>
+   <span class="badge a">AFTER</span>
+   <div class="frame phone"><img src="works-parking-after.jpg" alt="임직원 주차등록 웹앱 화면"></div>
+  </figure>
+  <div class="pktext">
+   <h4>임직원이 로그인 없이 직접 등록</h4>
+   <ol class="steps">
+    <li>개인 코드와 차량번호 뒤 4자리 입력</li>
+    <li>‘할인 등록’ 버튼 클릭</li>
+    <li>조회부터 할인 2종 적용까지 자동 처리, 결과를 화면에 바로 안내</li>
+   </ol>
+   <p class="why"><b>달라진 점</b>업체 시스템의 API를 확인해 웹앱이 관리자 계정으로 대신 호출하도록 만들었습니다. 계정 정보는 스크립트 안에만 보관하므로 임직원은 계정 없이 직접 등록하고, 담당자가 요청을 받아 처리하는 과정이 없어졌습니다.</p>
+  </div>
+ </div>
+ <p class="cap">업체 콘솔은 실제 화면에 진행 순서를 표시했고, 웹앱 화면의 개인 코드와 차량번호는 가상 값입니다.</p>
+
+ <h3 class="sub">연결 구조</h3>
+ <div class="arch">
+  <div class="an"><b>임직원</b><span>개인 코드 + 차량번호 4자리</span></div>
+  <i>→</i>
+  <div class="an dark"><b>주차등록 웹앱</b><span>Google Apps Script</span><small>명단 시트에서 개인 코드 확인</small></div>
+  <i>→</i>
+  <div class="an"><b>업체 시스템 API</b><span>로그인 · 차량 조회 · 할인 적용</span></div>
+ </div>
+ <p class="cap">업체 콘솔 화면이 호출하는 요청을 분석해 로그인·차량 조회·할인 적용 API를 확인하고, 웹앱에서 같은 순서로 호출하도록 구성</p>
+
+ <h3 class="sub">설계할 때 신경 쓴 점</h3>
+ <ul class="points">
+  <li><b>공용 코드 대신 개인 코드</b><span>공용 코드는 외부로 유출될 수 있다고 판단해, 임직원 246명에게 각각 고유 코드를 부여하고 구글 시트 명단으로 관리하도록 했습니다.</span></li>
+  <li><b>예외 상황 안내</b><span>정기권 차량, 이미 할인이 적용된 차량, 뒷번호가 같은 차량이 여러 대인 경우를 구분해 안내 문구를 보여 줍니다.</span></li>
+ </ul>
+
+ <h3 class="sub">무분별한 사용을 막기 위한 장치</h3>
+ <table class="cmp guard">
+  <thead><tr><th>방안</th><th>내용</th><th>상태</th></tr></thead>
+  <tbody>
+   <tr><td>개인 코드 확인</td><td>명단에 등록된 코드만 처리하고, 할인 내역 메모에 등록자 이름을 남김</td><td><span class="st on">적용</span></td></tr>
+   <tr><td>코드별 사용 중지</td><td>코드가 유출되거나 퇴사하면 명단에서 해당 코드만 사용 중지</td><td><span class="st on">적용</span></td></tr>
+   <tr><td>할인 항목 고정</td><td>크레딧이 들지 않는 2종(1시간 무료, 80% 할인)만 적용하고, 유료 할인은 웹앱으로 등록 불가</td><td><span class="st on">적용</span></td></tr>
+   <tr><td>고객사 차량 분리</td><td>고객사 차량은 웹앱 대상에서 제외하고, 고객사명·예상 출차시간·요청 직원을 적어 인사총무팀에 요청</td><td><span class="st on">적용</span></td></tr>
+   <tr><td>본인 등록 차량만 처리</td><td>인사총무팀에 미리 등록한 본인 자차 번호와 일치할 때만 할인 적용</td><td><span class="st">검토 중</span></td></tr>
+   <tr><td>등록 내역 관리</td><td>일시·차량번호·이름·코드·처리 결과를 기록 시트에 남기고 월별 사용 현황 점검</td><td><span class="st">검토 중</span></td></tr>
+   <tr><td>사용 횟수 제한</td><td>1인당 하루 등록 횟수에 상한을 두어 업무 외 반복 사용 방지</td><td><span class="st">검토 중</span></td></tr>
+  </tbody>
+ </table>
+ <p class="note">업체 시스템 주소와 계정 정보는 보안상 공개하지 않습니다.</p>
+</section>
+
 </main>
 
 <footer>
@@ -300,7 +411,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px}
 
 <script>
 (function(){
- var ids=['all','webapp','mail','onboarding','welcome-kit'];
+ var ids=['all','webapp','mail','onboarding','welcome-kit','parking'];
  var tabs=[].slice.call(document.querySelectorAll('.tab'));
  function show(id,scroll){
   if(ids.indexOf(id)<0) id='all';

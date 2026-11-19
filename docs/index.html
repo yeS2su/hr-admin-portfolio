@@ -168,6 +168,28 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset
 @media(max-width:760px){.competency-grid,.experience-grid{grid-template-columns:1fr}.experience-heading{display:block}.experience-heading>span{display:block;margin-top:6px}.hero h1{font-size:clamp(32px,8vw,60px)}}
 @media print{header,.tabs,footer{display:none}.hero{padding:20px 0}.panel[hidden]{display:block!important}.panel{break-before:page}.card,.experience{break-inside:avoid}main.wrap{padding:0}.note{color:var(--sub)}}
 
+
+/* onboarding accents */
+#p-onboarding mark{background:linear-gradient(transparent 58%,#e3ead9 58%);color:var(--ink);font-weight:600;padding:0 1px}
+#p-onboarding h3.sub{display:flex;align-items:center;gap:10px}
+#p-onboarding h3.sub:before{content:"";width:4px;height:18px;border-radius:2px;background:var(--acc)}
+#p-onboarding .experience h4{color:var(--acc-ink)}
+#p-onboarding .experience .scope b{color:var(--acc-ink)}
+#p-onboarding ol.steps li::marker{color:var(--acc-ink);font-weight:700}
+#p-onboarding .pkrow.wide .why{background:#faf7f2;border-color:#ece3d6;border-left:4px solid #c9b39a}
+#p-onboarding .pkrow.wide .why b{color:#8a6f52}
+#p-onboarding .pkrow:not(.wide) .why{background:#f3f6ef;border-color:#dfe7d6;border-left:4px solid var(--acc)}
+#p-onboarding .pkrow:not(.wide) .why b{color:var(--acc-ink)}
+#p-onboarding .pktext h4{color:var(--ink)}
+#p-onboarding table.cmp td:first-child{color:var(--acc-ink)}
+#p-onboarding table.cmp td:last-child{color:var(--ink);font-weight:500}
+#p-onboarding table.cmp thead th:last-child{color:var(--acc-ink)}
+#p-onboarding ul.points b{color:var(--acc-ink)}
+#p-onboarding .lead-sm{color:var(--sub);font-size:14.5px;margin:-4px 0 14px}
+#p-onboarding .guide .node{border-top:3px solid var(--acc)}
+#p-onboarding .guide .node .tag{color:var(--acc-ink)}
+#p-onboarding .ob-cmp td.none{color:#b3a493}
+#p-onboarding .ob-cmp td{font-size:14px}
 </style>
 </head>
 <body>
@@ -220,7 +242,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset
   </button>
   <button class="card" data-go="onboarding">
    <div class="thumb"><img src="works-ob-hub.png" alt="신입사원 온보딩 노션 페이지"></div>
-   <div class="body"><div class="kind">NOTION</div><h3>신입사원 온보딩 페이지</h3><p>입사 첫날부터 적응까지 필요한 안내를 한곳에 모은 노션 가이드북</p></div>
+   <div class="body"><div class="kind">NOTION <span class="ai">Claude</span></div><h3>신입사원 온보딩 페이지</h3><p>약 10분간의 구두 OT를 보완하기 위해 입사 절차와 회사 제도를 정리한 노션 온보딩 페이지</p></div>
   </button>
   <button class="card" data-go="welcome-kit">
    <div class="thumb"><img src="works-band-mockup.jpg" alt="웰컴키트 띠지 목업"></div>
@@ -242,7 +264,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset
   <div><dt>직접 정한 부분</dt><dd>입력 항목·업무 규칙·처리 순서</dd></div>
   <div><dt>사용 기술</dt><dd>TypeScript · Hono · Cloudflare Workers · D1</dd></div>
  </dl>
-<div class="experience"><div class="experience-heading"><h3>업무 항목과 처리 기준</h3><span>공개 시연: 가상 데이터</span></div><div class="experience-grid"><section><h4>경험의 배경</h4><p>업무일지, 채용 현황, 자산대장을 오가며 필요한 기록을 확인해야 했습니다. 기존 자료의 항목과 업무별 처리 순서를 웹앱에 담았습니다.</p></section><section><h4>직접 맡은 일</h4><p>입력 항목과 분류, 마감일, 완료 기준을 정했습니다. 코드 작성에 AI를 활용하고, 입력 내용과 저장 결과가 업무에 맞는지 확인했습니다.</p></section></div><p class="scope"><b>확인한 내용</b>가상 데이터로 등록, 저장, 재조회, 완료 상태 변경을 확인했습니다. 업무별 정보와 처리 상태를 화면에 표시해 다음에 할 일을 확인하도록 했습니다.</p></div>
+<div class="experience"><div class="experience-heading"><h3>업무 항목과 처리 기준</h3><span>공개 시연: 가상 데이터</span></div><div class="experience-grid"><section><h4>추진 배경</h4><p>업무일지, 채용 현황, 자산대장을 오가며 필요한 기록을 확인해야 했습니다. 기존 자료의 항목과 업무별 처리 순서를 웹앱에 담았습니다.</p></section><section><h4>수행 내용</h4><p>입력 항목과 분류, 마감일, 완료 기준을 정했습니다. 코드 작성에 AI를 활용하고, 입력 내용과 저장 결과가 업무에 맞는지 확인했습니다.</p></section></div><p class="scope"><b>확인 사항</b>가상 데이터로 등록, 저장, 재조회, 완료 상태 변경을 확인했습니다. 업무별 정보와 처리 상태를 화면에 표시해 다음에 할 일을 확인하도록 했습니다.</p></div>
  <div class="frame"><img src="works-hr-admin-hero.jpg" alt="HR-Admin 프로젝트 소개 페이지"></div>
  <h3 class="sub">주요 기능</h3>
  <div class="two">
@@ -268,7 +290,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset
   <div><dt>직접 정한 부분</dt><dd>레이아웃·색감·문구·캐릭터 연출</dd></div>
   <div><dt>사용 AI</dt><dd>Claude</dd></div>
  </dl>
-<div class="experience"><div class="experience-heading"><h3>합격자에게 필요한 정보</h3><span>전후 디자인 비교</span></div><div class="experience-grid"><section><h4>경험의 배경</h4><p>기존 메일의 표에는 성함과 일시, 장소, 서류가 함께 담겨 있었습니다. 안내 내용을 구분하고 환영 인사를 넣으려 했습니다.</p></section><section><h4>직접 맡은 일</h4><p>레이아웃과 색감, 문구, 캐릭터 연출을 정했습니다. 입사 정보와 구비 서류를 나누고, 시안 제작과 HTML 코딩에 Claude를 활용했습니다.</p></section></div><p class="scope"><b>확인한 내용</b>항목명과 값의 색을 구분하고 행 구분선을 넣었습니다. 기존 메일과 수정한 메일을 나란히 배치했습니다.</p></div>
+<div class="experience"><div class="experience-heading"><h3>합격자에게 필요한 정보</h3><span>전후 디자인 비교</span></div><div class="experience-grid"><section><h4>추진 배경</h4><p>기존 메일의 표에는 성함과 일시, 장소, 서류가 함께 담겨 있었습니다. 안내 내용을 구분하고 환영 인사를 넣으려 했습니다.</p></section><section><h4>수행 내용</h4><p>레이아웃과 색감, 문구, 캐릭터 연출을 정했습니다. 입사 정보와 구비 서류를 나누고, 시안 제작과 HTML 코딩에 Claude를 활용했습니다.</p></section></div><p class="scope"><b>확인 사항</b>항목명과 값의 색을 구분하고 행 구분선을 넣었습니다. 기존 메일과 수정한 메일을 나란히 배치했습니다.</p></div>
 
  <div class="ba">
   <figure><span class="badge b">BEFORE</span><div class="frame"><img src="works-mail-before.jpg" alt="기존 최종합격 안내 메일"></div></figure>
@@ -298,33 +320,80 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset
 <!-- ONBOARDING -->
 <section class="panel" id="p-onboarding" role="tabpanel" hidden>
  <div class="sec-head"><span class="no">03</span><h2>신입사원 온보딩 페이지</h2></div>
- <p class="intro">입사 첫날부터 수습기간까지 필요한 안내를 담은 노션 가이드북입니다. 담당자에게 반복해서 들어오던 질문을 주제별로 정리해, 입사자가 필요한 정보를 스스로 찾아볼 수 있도록 구성했습니다.</p>
+ <p class="intro">인수인계받은 방식대로 진행하던 <mark>약 10분간의 구두 OT를 보완</mark>하기 위해 제작한 노션 온보딩 페이지입니다. 입사 첫날 절차부터 수습기간, 회사생활 제도, 자주 묻는 질문까지 입사자가 필요할 때 <mark>직접 확인할 수 있도록</mark> 정리했습니다.</p>
  <dl class="meta">
-  <div><dt>대상</dt><dd>신규 입사자 (수습기간 포함)</dd></div>
-  <div><dt>구성</dt><dd>메인 허브 + 6개 섹션 + 하위 가이드 2개</dd></div>
-  <div><dt>도구</dt><dd>Notion · Notion Sites</dd></div>
+  <div><dt>사용 AI</dt><dd>Claude</dd></div>
+  <div><dt>직접 구성한 부분</dt><dd>수록 내용·페이지 구조·안내 순서</dd></div>
+  <div><dt>사용 도구</dt><dd>Notion · Notion Sites</dd></div>
  </dl>
-<div class="experience"><div class="experience-heading"><h3>입사자가 정보를 찾는 순서</h3><span>입사 안내와 FAQ 구성</span></div><div class="experience-grid"><section><h4>경험의 배경</h4><p>담당자에게 반복해서 들어오던 질문을 주제별로 정리했습니다. 첫날 할 일부터 수습기간 안내까지 필요한 내용을 노션에 모았습니다.</p></section><section><h4>직접 맡은 일</h4><p>페이지 구조와 체크리스트 순서를 구성했습니다. 상황별 빠른 찾기, 제도 설명 토글, FAQ와 피드백 창구를 배치했습니다.</p></section></div><p class="scope"><b>확인한 내용</b>입사자가 제도별 안내를 찾아 읽도록 정리했습니다. 첫날 체크리스트와 수습기간 안내를 구분했습니다. FAQ와 피드백 창구를 두고 내용을 보완하도록 했습니다.</p></div>
- <div class="frame"><img src="works-ob-hub.png" alt="온보딩 페이지 메인 허브"></div>
- <p class="cap">메인 허브 · 회사 로비 사진을 커버로 쓰고, 상황별 ‘빠르게 찾기’ 안내를 맨 위에 배치</p>
+<div class="experience"><div class="experience-heading"><h3>첫날 OT를 보완하는 온보딩 자료</h3><span>노션 페이지 / 의견 반영</span></div><div class="experience-grid"><section><h4>추진 배경</h4><p>인수인계받은 OT 자료로 약 10분간 OT를 진행해 왔습니다. 자료가 회사 소개와 제도 요약 위주로 구성되어 장비 세팅, 그룹웨어 사용법 등 입사 첫날 필요한 내용은 다루지 않았고, 입사 이후에도 유사한 문의가 반복되었습니다. 이에 입사자가 다시 확인할 수 있는 자료가 필요하다고 판단했습니다.</p></section><section><h4>수행 내용</h4><p>입사자에게 반복해서 받은 문의를 주제별로 분류해 수록 내용과 안내 순서를 정했습니다. 기존 업무와 병행하기 위해 내용을 먼저 정리한 뒤, Claude와 Notion을 연동해 페이지를 제작했습니다.</p></section></div><p class="scope"><b>확인 사항</b>입사 첫날 체크리스트와 수습기간 안내를 구분하고, 제도별 안내를 각 페이지에 정리했습니다. FAQ와 익명 건의 창구를 마련해 입사자 의견을 반영할 수 있도록 했습니다.</p></div>
 
- <h3 class="sub">페이지 구조</h3>
- <div class="root"><b>👋 Welcome to 데솔! | 신입사원 온보딩 페이지</b><span>첫날 할 일 · 회사 이해 · 휴가·연차 · FAQ 빠른 찾기</span></div>
- <div class="sitemap">
-  <div class="node"><span class="tag">입사 첫날</span><h4>👋 시작하기</h4><ul><li>서류 &amp; 계약 체크리스트</li><li>계정 &amp; 시스템 세팅</li><li>사진 제출 &amp; 처우 확인</li><li>첫날 인사 &amp; 적응</li><li>하위 가이드: 그룹웨어와 친해지기, 장비 세팅 가이드</li></ul></div>
-  <div class="node"><span class="tag">회사 이해</span><h4>🏢 우리 회사 이해하기</h4><ul><li>회사 소개와 사업 분야</li><li>주요 솔루션·고객사</li><li>사내 용어 사전 (IT 용어 11개 · 회사생활 용어 19개)</li><li>회사 위치</li></ul></div>
-  <div class="node"><span class="tag">제도 안내</span><h4>🧭 회사생활</h4><ul><li>급여 안내</li><li>수습평가 &amp; 3개월 적응 로드맵</li><li>휴가 사용법 · 연차 부여 방식</li><li>연차촉진제도</li><li>경조휴가 · 경조금 지원표</li></ul></div>
-  <div class="node"><span class="tag">직장 생활 기본</span><h4>🤝 비즈니스 매너 &amp; 커뮤니케이션</h4><ul><li>인사 · 복장 규정</li><li>메일 작성법</li><li>회의 &amp; 미팅 매너</li><li>전화 예절 · 보고 원칙</li></ul></div>
-  <div class="node"><span class="tag">생활 정보</span><h4>🗺️ 회사 주변 꿀팁</h4><ul><li>맛집 · 카페</li><li>편의시설</li><li>출퇴근 팁</li></ul></div>
-  <div class="node"><span class="tag">문의 · 개선</span><h4>💬 FAQ / 피드백</h4><ul><li>자주 묻는 질문 9개</li><li>피드백 · 익명 건의 창구</li><li>계속 보완하는 문서로 운영</li></ul></div>
+ <div class="pkrow wide">
+  <div>
+   <span class="badge b">BEFORE</span>
+   <div class="pktext">
+    <h4>인수인계받은 OT 자료로 진행하던 약 10분간의 OT</h4>
+    <ol class="steps">
+     <li>입사 첫날 담당자가 OT 자료(PPT 29장)를 읽으며 약 10분 내 안내</li>
+     <li>회사 개요, 조직도, 직급 체계, 연차, 급여, 근태, 복리후생 7개 항목 설명</li>
+     <li>근로계약서와 그룹웨어 계정은 OT 이후 문자로 별도 안내</li>
+     <li>이후 궁금한 사항은 입사자가 담당자에게 개별 문의</li>
+    </ol>
+    <p class="why"><b>개선 필요 사항</b>OT 자료가 회사 소개와 제도 요약 위주로 구성되어, 장비 세팅, 그룹웨어 사용법, 휴가·근로 신청 절차, 수습기간 안내는 포함되어 있지 않았습니다. 입사자가 다시 확인할 수 있는 자료가 정리되어 있지 않아, 같은 내용도 매번 담당자를 통해 확인해야 했습니다.</p>
+   </div>
+  </div>
+ </div>
+ <div class="pkrow">
+  <figure>
+   <span class="badge a">AFTER</span>
+   <div class="frame"><img src="works-ob-hub.png" alt="온보딩 페이지 메인 허브"></div>
+  </figure>
+  <div class="pktext">
+   <h4>입사자가 필요할 때 직접 확인하는 온보딩 페이지</h4>
+   <ol class="steps">
+    <li>입사 첫날 ‘시작하기’ 체크리스트에 따라 서류, 계정, 사진 제출, 인사 순으로 진행</li>
+    <li>궁금한 제도는 메인 페이지의 ‘빠르게 찾기’를 통해 해당 페이지에서 확인</li>
+    <li>해결되지 않은 문의는 FAQ·피드백 창구로 접수해 페이지에 반영</li>
+   </ol>
+   <p class="why"><b>개선 내용</b>OT에서 충분히 안내하지 못한 내용을 입사자가 첫날 이후에도 다시 확인할 수 있게 되었습니다. 반복되던 문의의 답변을 페이지에 정리해, 동일한 문의에는 해당 페이지를 안내하고 있습니다.</p>
+  </div>
+ </div>
+ <p class="cap">메인 페이지 · 회사 로비 사진을 커버로 사용하고, 상황별 ‘빠르게 찾기’를 상단에 배치</p>
+
+ <h3 class="sub">기존 OT와 안내 범위 비교</h3>
+ <table class="cmp ob-cmp">
+  <thead><tr><th>구분</th><th>기존 OT 자료</th><th>온보딩 페이지</th></tr></thead>
+  <tbody>
+   <tr><td>회사 이해</td><td>회사 개요, 연혁, 조직도, 직급 체계</td><td>회사 소개, 주요 솔루션·고객사, 사내 용어 사전(30개), 회사 위치</td></tr>
+   <tr><td>연차·휴가</td><td>연차 발생 기준과 계산 예시</td><td>회계연도 기준 부여 방식, 입사 첫해 산식 예시, 연차촉진 절차, 휴가 신청 방법</td></tr>
+   <tr><td>급여</td><td>급여기준일</td><td>급여체계확인서 전자서명 절차와 발송 시기</td></tr>
+   <tr><td>근태</td><td>출퇴근 체크 앱 소개</td><td>출퇴근 체크 앱과 그룹웨어 신청 경로 구분</td></tr>
+   <tr><td>복리후생</td><td>경조 지원, 여가, 포상, 선물</td><td>경조휴가·경조금 기준표, 회사·상조회 지원표, 지원금 신청 서식</td></tr>
+   <tr><td>장비 세팅</td><td class="none">미포함</td><td>윈도우 11 초기 설치, IP 설정, 프린터 연결</td></tr>
+   <tr><td>그룹웨어</td><td>계정 안내 문자 발송 예고</td><td>매뉴얼, 자주 쓰는 결재 서식, 아웃룩 연동, 초기 설정</td></tr>
+   <tr><td>수습기간</td><td class="none">미포함</td><td>3개월 적응 로드맵, 수습기간 업무 습관</td></tr>
+   <tr><td>직장생활 기본</td><td class="none">미포함</td><td>인사·복장, 메일, 회의, 전화, 보고 매너</td></tr>
+   <tr><td>문의·건의</td><td class="none">미포함</td><td>FAQ 9개, 익명 건의 창구</td></tr>
+  </tbody>
+ </table>
+
+ <h3 class="sub">주요 안내 내용</h3>
+ <p class="lead-sm">입사자가 처음에 혼자 해결하기 어려운 초기 세팅과 신청 절차를 단계별로 정리했습니다.</p>
+ <div class="sitemap guide">
+  <div class="node"><span class="tag">시작하기 › 장비 세팅 가이드</span><h4>💻 노트북 초기 세팅</h4><ul><li>네트워크 연결 없이 윈도우 11을 설치하는 방법</li><li>층별 IP 배정 방식과 수동 IP 설정 순서</li><li>프린터 모델명·IP 확인부터 드라이버 설치, IP 연결까지 단계별 안내</li></ul></div>
+  <div class="node"><span class="tag">시작하기 › 그룹웨어와 친해지기</span><h4>🖥️ 그룹웨어 사용법</h4><ul><li>그룹웨어 매뉴얼과 메신저 다운로드 위치</li><li>휴가계, 근로신청서, 복리후생 지원 신청서, 고정자산신청서의 용도</li><li>아웃룩 메일 연동 설정과 원본 메일 삭제 방지 유의사항</li><li>최초 비밀번호 변경, 서식 즐겨찾기, 알림 설정</li></ul></div>
+  <div class="node"><span class="tag">시작하기 › 계정 &amp; 시스템 세팅</span><h4>⏱️ 근태·신청 경로 구분</h4><ul><li>출퇴근 체크 앱은 출퇴근 기록 전용으로 사용</li><li>연차는 그룹웨어 휴가계, 야근·휴일근로는 근무신청서로 신청</li><li>그룹웨어 아이디는 메일 주소로 사용되어 변경이 불가하다는 점 사전 안내</li></ul></div>
+  <div class="node"><span class="tag">회사생활 › 휴가 사용법</span><h4>🗓️ 연차 부여 방식</h4><ul><li>회계연도(1월 1일) 기준 부여 원칙</li><li>입사 첫해 선부여와 다음 해 부여 산식을 입사 월 예시로 설명</li><li>연차촉진 1·2단계 절차와 미사용 연차 수당 관련 유의사항</li></ul></div>
+  <div class="node"><span class="tag">회사생활 › 수습평가 &amp; 적응 로드맵</span><h4>📝 수습기간 안내</h4><ul><li>1~3개월 차 주요 목표와 체크포인트를 표로 정리</li><li>질문, 실수 공유, 업무 메모, 중간 보고 등 수습기간 업무 습관 안내</li></ul></div>
+  <div class="node"><span class="tag">회사생활 › 급여 · 경조</span><h4>💰 급여·경조 지원</h4><ul><li>급여체계확인서 전자서명 절차와 발송 시기</li><li>경조휴가·경조금 지급 기준표, 회사·상조회 지원 정리표</li><li>가족친화 지원금의 별도 신청 서식 안내</li></ul></div>
  </div>
 
- <h3 class="sub">구성할 때 신경 쓴 점</h3>
+ <h3 class="sub">구성 시 고려 사항</h3>
  <ul class="points">
-  <li><b>상황별로 바로 찾기</b><span>메인 허브 맨 위에 ‘첫날 할 일 → 시작하기’처럼 상황과 페이지를 연결한 빠른 찾기를 두었습니다.</span></li>
-  <li><b>첫날 흐름대로 정리한 체크리스트</b><span>서류·계약 → 계정·시스템 → 사진·처우 → 인사·적응 순서로, 입사 당일 실제 진행 순서에 맞췄습니다.</span></li>
-  <li><b>읽기 부담을 줄인 구성</b><span>제도처럼 긴 내용은 토글로 접고, 꼭 알아야 할 내용은 색 콜아웃으로 강조했습니다.</span></li>
-  <li><b>의견을 반영하는 문서</b><span>FAQ와 피드백 창구를 두어 입사자 의견을 받아 내용을 보완하도록 했습니다.</span></li>
+  <li><b>상황별 바로가기</b><span>입사자가 상황에 맞는 페이지로 바로 이동할 수 있도록 메인 페이지 상단에 ‘첫날 할 일 → 시작하기’ 형식의 빠른 찾기를 배치했습니다.</span></li>
+  <li><b>첫날 진행 순서에 맞춘 체크리스트</b><span>서류·계약 → 계정·시스템 → 사진·처우 → 인사·적응 순으로 구성해, 체크리스트에 따라 첫날 절차를 누락 없이 진행할 수 있도록 했습니다.</span></li>
+  <li><b>가독성을 고려한 구성</b><span>분량이 많은 제도 안내는 토글로 접고, 반드시 확인해야 할 내용은 색상 콜아웃으로 강조했습니다.</span></li>
+  <li><b>익명 건의 창구 마련</b><span>입사 초기에는 담당자에게 직접 문의하기 어려운 사항도 있다고 판단해, FAQ와 함께 익명 건의 창구를 마련했습니다. 접수된 의견은 페이지에 반영해 보완하도록 했습니다.</span></li>
  </ul>
 
  <h3 class="sub">화면 미리보기</h3>
@@ -346,7 +415,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset
   <div><dt>규격</dt><dd>1040 × 110 mm</dd></div>
   <div><dt>적용</dt><dd>포장 케이스 (370 × 280 × 113 mm)</dd></div>
  </dl>
-<div class="experience"><div class="experience-heading"><h3>입사 환영 콘텐츠</h3><span>전개도와 적용 목업</span></div><div class="experience-grid"><section><h4>경험의 배경</h4><p>신규 입사자에게 전달하는 박스에 회사 캐릭터와 환영 문구를 넣는 띠지를 제작했습니다.</p></section><section><h4>직접 맡은 일</h4><p>회사 캐릭터와 WELCOME KIT 문구를 중심으로 구성하고, 박스 정면에 가운데 면이 오도록 설계했습니다. 시안 제작에 Google Nano Banana를 활용했습니다.</p></section></div><p class="scope"><b>확인한 내용</b>띠지 전개도와 박스 적용 목업을 함께 준비했습니다. 제작 규격과 박스에 두를 때의 배치에 맞췄습니다.</p></div>
+<div class="experience"><div class="experience-heading"><h3>입사 환영 콘텐츠</h3><span>전개도와 적용 목업</span></div><div class="experience-grid"><section><h4>추진 배경</h4><p>신규 입사자에게 전달하는 박스에 회사 캐릭터와 환영 문구를 넣는 띠지를 제작했습니다.</p></section><section><h4>수행 내용</h4><p>회사 캐릭터와 WELCOME KIT 문구를 중심으로 구성하고, 박스 정면에 가운데 면이 오도록 설계했습니다. 시안 제작에 Google Nano Banana를 활용했습니다.</p></section></div><p class="scope"><b>확인 사항</b>띠지 전개도와 박스 적용 목업을 함께 준비했습니다. 제작 규격과 박스에 두를 때의 배치에 맞췄습니다.</p></div>
  <div class="frame"><img src="works-band-mockup.jpg" alt="웰컴키트 박스에 띠지를 두른 목업"></div>
  <p class="cap">박스 적용 목업</p>
  <h3 class="sub">띠지 전개도</h3>
@@ -363,7 +432,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset
   <div><dt>직접 정한 부분</dt><dd>등록 흐름·개인 코드 방식·적용 항목</dd></div>
   <div><dt>사용 기술</dt><dd>Google Apps Script · Google Sheets</dd></div>
  </dl>
-<div class="experience"><div class="experience-heading"><h3>반복 요청과 사용 범위</h3><span>동작 확인 / 일부 통제 검토 중</span></div><div class="experience-grid"><section><h4>경험의 배경</h4><p>할인 등록에 관리자 계정이 필요해 담당자가 요청을 받아 대신 처리했습니다. 관리자 계정에는 유료 할인과 크레딧 관련 기능도 있었습니다.</p></section><section><h4>직접 맡은 일</h4><p>직접 등록하는 흐름과 개인 코드 방식, 할인 항목을 정했습니다. AI와 코드를 작성하고 차량 조회와 할인 적용 동작을 확인했습니다.</p></section></div><p class="scope"><b>확인한 내용</b>무료 할인 2종만 적용하고 개인 코드 확인과 사용 중지를 반영했습니다. 본인 차량 대조, 사용 기록과 횟수 제한은 검토 중입니다.</p></div>
+<div class="experience"><div class="experience-heading"><h3>반복 요청과 사용 범위</h3><span>동작 확인 / 일부 통제 검토 중</span></div><div class="experience-grid"><section><h4>추진 배경</h4><p>할인 등록에 관리자 계정이 필요해 담당자가 요청을 받아 대신 처리했습니다. 관리자 계정에는 유료 할인과 크레딧 관련 기능도 있었습니다.</p></section><section><h4>수행 내용</h4><p>직접 등록하는 흐름과 개인 코드 방식, 할인 항목을 정했습니다. AI와 코드를 작성하고 차량 조회와 할인 적용 동작을 확인했습니다.</p></section></div><p class="scope"><b>확인 사항</b>무료 할인 2종만 적용하고 개인 코드 확인과 사용 중지를 반영했습니다. 본인 차량 대조, 사용 기록과 횟수 제한은 검토 중입니다.</p></div>
 
  <div class="pkrow wide">
   <figure>
